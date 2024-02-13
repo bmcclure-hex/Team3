@@ -1,15 +1,18 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import statsComp from './Components/statsComp';
 import statsIncomp from './Components/statsIncomp';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
 });
+
+
 
 const headLabel =styled('h1')({
   textAlign: 'center',
@@ -30,6 +33,13 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Judge() {
+  const navigate = useNavigate(); 
+
+  const scorePage = () => {
+    navigate('/score');
+  }
+  
+
   return (
     <h1 style={{ textAlign: 'center' }}> Judge View
     <Container>
@@ -61,7 +71,7 @@ function Judge() {
             <Item>
             <div>Team 9</div>
             <div style={{color: 'red'}}>INCOMPLETE</div>
-              <Button size="small">Review</Button>
+              <Button size="small" onClick={scorePage}>Review</Button>
             </Item>
           </Box>
         </Box>

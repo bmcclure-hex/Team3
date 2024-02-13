@@ -6,9 +6,9 @@ import Paper from '@mui/material/Paper';
 
 
 function statsComp() {
-    return
+    return(
          <div style={{ color: 'green' }}>SUBMITTED</div>
     
-}
+)}
 export default statsComp;
 
