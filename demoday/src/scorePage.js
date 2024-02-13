@@ -14,20 +14,29 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const Container = styled('h1')({
+const genLabel =styled('h4')({
+  textAlign: 'center',
+
+});
+
+const Container = styled(Grid)({
     display: 'flex',
     justifyContent: 'center',
+    margin:20
   });
   
 
 function scorePage(){
     return(
-        <Container>
+      <h1 style={{ textAlign: 'center' }}>Evaluation
+    <Container>
+   
      <Grid container spacing={2}>
       {/* First grid */}
       <Grid item xs={6}>
       <h4>Project Name:</h4>
       <p>Sample Project</p>
+      
       <h4>Project Description:</h4>
       <p>This project aims to develop a new application for managing tasks and deadlines.</p>
 
@@ -36,10 +45,12 @@ function scorePage(){
 
       <h4>Project Type:</h4>
       <p>Web Application</p>
+
       <Grid item xs={6}>
       <h4>Score:</h4>
-      <TextField />
       </Grid>
+      
+      <Grid item xs={6}><TextField /></Grid>
       
       </Grid>
       {/* Second grid */}
@@ -53,7 +64,8 @@ function scorePage(){
        <button>Submit</button>
       </Grid>
     </Grid>
-      </Container>
+    </Container>
+  </h1>
     );
 }
 export default scorePage;
