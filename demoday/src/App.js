@@ -1,4 +1,6 @@
 import React from 'react'
+import Judge from './judgeRedir';
+
 
 export default function App() {
   return (
