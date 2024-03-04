@@ -1,10 +1,10 @@
-import React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
-import logo from './Assets/istockphoto-1147544807-612x612.jpg'
+import { styled } from '@mui/material/styles';
+import React from 'react';
+import logo from './Assets/istockphoto-1147544807-612x612.jpg';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

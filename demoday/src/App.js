@@ -1,21 +1,23 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Importing components
-import Header from './components/header';
-import Footer from './components/footer';
-import Home from './pages/Home';
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Home from "./pages/Home";
+
+//Import Pages (for Testing purpose)
+import Judge from "./pages/judgeRedir";
+import ScorePage from "./pages/scorePage";
 
 // Context
-import { UserContextProvider } from './context/user-context';
+import { UserContextProvider } from "./context/user-context";
 
 // MUI date picker imports for Luxon
-import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-// import Judge from './judgeRedir';
-// import ScorePage from './scorePage';
-// import{ BrowserRouter as Router, Route, Switch, Routes} from 'react-router-dom';
+import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 
+// import{ BrowserRouter as Router, Route, Switch, Routes} from 'react-router-dom';
 
 export default function App() {
   // State management for accessCode can be defined here if needed
@@ -28,6 +30,10 @@ export default function App() {
           <Header /> {/* Header added at the top */}
           <Routes>
             <Route path="/" element={<Home />} />
+
+            {/*for testing purposing*/}
+            <Route path="/jview" element={<Judge />} />
+            <Route path="/score" element={<ScorePage />} />
             {/* Uncomment and modify the following routes as per your application's requirements */}
             {/* <Route path="/AgreePage" element={<AgreePage accessCode={accessCode} verifyAccessCode={verifyAccessCode} />} /> */}
             {/* <Route path="/AudioPlayer" element={<AuthWrapper component={<AudioPlayer />} />} /> */}
