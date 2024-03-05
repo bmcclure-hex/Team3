@@ -4,7 +4,6 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import React from 'react';
-import logo from './Assets/istockphoto-1147544807-612x612.jpg';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -55,7 +54,7 @@ function scorePage(){
       </Grid>
       {/* Second grid */}
       <Grid item xs={6}>
-        <img src={logo} alt="Logo" />
+        <img src="/Assets/placeholder.jpg" alt="Logo" />
     
       </Grid>
     
