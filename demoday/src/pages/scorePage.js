@@ -26,6 +26,7 @@ const Container = styled(Grid)({
   
 
 function scorePage(){
+     {/*Title*/}
     return(
       <h1 style={{ textAlign: 'center' }}>Evaluation
     <Container>
