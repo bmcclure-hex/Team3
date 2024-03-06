@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import{Typography} from '@mui/material'
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import statsComp from "../components/statsComp";
@@ -37,11 +38,12 @@ function Judge() {
   return (
     <h1 style={{ textAlign: "center" }}>
       {" "}
-      Judge View
+      <Typography align='center' sx={{my:5}} variant='h4'> Scoring Portal</Typography>
+
       <Container>
         <Box sx={{ width: "50%" }}>
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
-            <Box gridColumn="span 10">
+            <Box gridColumn="span 12">
               <Item>
                 <div>Team 2</div>
                 <div style={{ color: "green" }}>COMPLETE</div>
@@ -49,21 +51,21 @@ function Judge() {
                 <Button size="small">Review</Button>
               </Item>
             </Box>
-            <Box gridColumn="span 10">
+            <Box gridColumn="span 12">
               <Item>
                 <div>Team 1</div>
                 <div style={{ color: "green" }}>COMPLETE</div>
                 <Button size="small">Review</Button>
               </Item>
             </Box>
-            <Box gridColumn="span 10">
+            <Box gridColumn="span 12">
               <Item>
                 <div>Team 3</div>
                 <div style={{ color: "green" }}>COMPLETE</div>
                 <Button size="small">Review</Button>
               </Item>
             </Box>
-            <Box gridColumn="span 10">
+            <Box gridColumn="span 12">
               <Item>
                 <div>Team 9</div>
                 <div style={{ color: "red" }}>INCOMPLETE</div>
