@@ -5,6 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Home from "./pages/Home";
+import SignUpPage from "./pages/Signup";
+import CompetitorSignup from "./pages/signup/competitorSignup";
+import JudgeSignup from "./pages/signup/judgeSignup";
 
 //Import Pages (for Testing purpose)
 import Judge from "./pages/judgeRedir";
@@ -30,6 +33,9 @@ export default function App() {
           <Header /> {/* Header added at the top */}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/pages/Signup" element={<SignUpPage/>} />
+            <Route path="/pages/signup/competitorSignup" element={<CompetitorSignup />} />
+            <Route path="/pages/signup/judgeSignup" element={<JudgeSignup />} />
 
             {/*for testing purposing*/}
             <Route path="/jview" element={<Judge />} />
