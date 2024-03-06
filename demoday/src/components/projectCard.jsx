@@ -1,19 +1,47 @@
-import { Grid, Typography } from '@mui/material'
-import React from 'react'
+import {
+  Grid,
+  Typography,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Box,
+} from "@mui/material";
+import React from "react";
 
 const ProjectCard = () => {
   return (
-    <div>
-        <Typography align='center' variant='h4' >Project Title:</Typography>
-        <Typography variant= 'h5'>Project Description:</Typography>
-        <Typography variant= 'body2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.</Typography>
+    <Card style={{ position: "sticky", top: "0" }}>
+      <CardContent>
+        <Typography align="left" style={{ marginBottom: "16px" }} variant="h4">
+          Project Title: Sample Project{" "}
+        </Typography>
+        <Typography style={{ marginBottom: "8x" }} variant="h5">
+          Project Description:
+        </Typography>
+        <Typography style={{ marginBottom: "16px" }} variant="body2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
+          blanditiis tenetur unde suscipit, quam beatae rerum inventore
+          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
+          fugiat deleniti? Eum quasi quidem quibusdam.
+        </Typography>
+      </CardContent>
+      <CardMedia
+        component="img"
+        image="/Assets/placeholder.jpg"
+        height="340"
+        alt="Project Media"
+      />
+    </Card>
+  );
+};
 
-        <img src="/Assets/placeholder.jpg" alt="Logo" />
-    </div>
-           
+export default ProjectCard;
+
+{
+  /* <div>
 
 
-  )
+<img src="/Assets/placeholder.jpg" alt="Logo" />
+</div> */
 }
-
-export default ProjectCard

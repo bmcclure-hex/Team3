@@ -8,9 +8,7 @@ import Home from "./pages/Home";
 import SignUpPage from "./pages/Signup";
 import CompetitorSignup from "./pages/signup/competitorSignup";
 import JudgeSignup from "./pages/signup/judgeSignup";
-
-//Import Pages (for Testing purpose)
-import Judge from "./pages/judgeRedir";
+import JudgeView from "./pages/judgeRedir";
 import ScorePage from "./pages/scorePage";
 
 // Context
@@ -36,10 +34,8 @@ export default function App() {
             <Route path="/pages/Signup" element={<SignUpPage/>} />
             <Route path="/pages/signup/competitorSignup" element={<CompetitorSignup />} />
             <Route path="/pages/signup/judgeSignup" element={<JudgeSignup />} />
-
-            {/*for testing purposing*/}
-            <Route path="/jview" element={<Judge />} />
-            <Route path="/score" element={<ScorePage />} />
+            <Route path="/pages/jview" element={<JudgeView />} />
+            <Route path="/pages/scoring" element={<ScorePage />} />
             {/* Uncomment and modify the following routes as per your application's requirements */}
             {/* <Route path="/AgreePage" element={<AgreePage accessCode={accessCode} verifyAccessCode={verifyAccessCode} />} /> */}
             {/* <Route path="/AudioPlayer" element={<AuthWrapper component={<AudioPlayer />} />} /> */}
