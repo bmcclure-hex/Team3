@@ -23,7 +23,7 @@ const ProjectCard = () => {
       <CardMedia
         component="img"
         image={exampleImage}
-        height="500"
+        height="370"
         alt="Project Media"
       />
     </Card>
