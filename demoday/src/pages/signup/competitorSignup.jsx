@@ -42,7 +42,7 @@ const CompetitorSignup = () => {
   };
 
   return (
-    <Container style={{ minHeight: '100vh' }}>
+    <Container style={{ minHeight: '110vh' }}>
         <Box sx={{ '& .MuiTextField-root': { m: 1 }, '& .MuiButton-root': { m: 1 } }}>
       {currentPage === 1 && (
         <Box>
@@ -50,7 +50,14 @@ const CompetitorSignup = () => {
           
           <TextField fullWidth label="Project Title" name="title" value={project.title} onChange={handleProjectChange} />
           <TextField fullWidth multiline rows={4} label="Project Description" name="description" value={project.description} onChange={handleProjectChange} />
-          <Box ml={2}>
+          <Box ml={2} mt={2}>
+          <Typography>Upload Project Media</Typography>
+          <Button mb={3} variant="contained" component="label">
+            Upload
+            <input type="file" hidden onChange={(e) => setProject({ ...project, media: e.target.files[0] })} />
+          </Button>
+          </Box>
+          <Box ml={2} mt={2}>
           <FormControl component="fieldset">
             <FormLabel component="legend">Project Type</FormLabel>
             <RadioGroup row name="type" value={project.type} onChange={handleProjectChange}>
@@ -59,7 +66,8 @@ const CompetitorSignup = () => {
             </RadioGroup>
           </FormControl>
           </Box>
-          <Box ml={2}>
+          
+          <Box ml={2} mt={2} mb={2}>
           <FormControl component="fieldset">
             <FormLabel component="legend">Team Classification</FormLabel>
             <RadioGroup row name="classification" value={project.classification} onChange={handleProjectChange}>
@@ -69,10 +77,7 @@ const CompetitorSignup = () => {
             </RadioGroup>
           </FormControl>
           </Box>
-          <Button mb={3} variant="contained" component="label">
-            Upload
-            <input type="file" hidden onChange={(e) => setProject({ ...project, media: e.target.files[0] })} />
-          </Button>
+          
           <TextField
   fullWidth
   label="Password"

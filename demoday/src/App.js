@@ -8,10 +8,13 @@ import Home from "./pages/Home";
 import SignUpPage from "./pages/Signup";
 import CompetitorSignup from "./pages/signup/competitorSignup";
 import JudgeSignup from "./pages/signup/judgeSignup";
+import CompetitorLogin from "./pages/login/competitorLogin";
+import JudgeLogin from "./pages/login/judgeLogin";
 
 //Import Pages (for Testing purpose)
 import Judge from "./pages/judgeRedir";
 import ScorePage from "./pages/scorePage";
+
 
 // Context
 import { UserContextProvider } from "./context/user-context";
@@ -36,6 +39,8 @@ export default function App() {
             <Route path="/pages/Signup" element={<SignUpPage/>} />
             <Route path="/pages/signup/competitorSignup" element={<CompetitorSignup />} />
             <Route path="/pages/signup/judgeSignup" element={<JudgeSignup />} />
+            <Route path="/pages/login/competitorLogin" element={<CompetitorLogin />} />
+            <Route path="/pages/login/judgeLogin" element={<JudgeLogin />} />
 
             {/*for testing purposing*/}
             <Route path="/jview" element={<Judge />} />

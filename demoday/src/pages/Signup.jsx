@@ -47,10 +47,10 @@ const SignUpPage = () => {
           Already signed up?
         </Typography>
         <Box display="flex" justifyContent="center" mt={2}>
-          <Button variant="outlined" color="primary" style={{ margin: '0 8px' }}>
+          <Button onClick={() => navigate('/pages/login/competitorLogin')} variant="outlined" color="primary" style={{ margin: '0 8px' }}>
             Login as a Competitor
           </Button>
-          <Button variant="outlined" color="primary" style={{ margin: '0 8px' }}>
+          <Button onClick={() => navigate('/pages/login/judgeLogin')} variant="outlined" color="primary" style={{ margin: '0 8px' }}>
             Login as a Judge
           </Button>
         </Box>

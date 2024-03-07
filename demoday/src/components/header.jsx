@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, Menu, MenuItem  } from '@mui/material';
+import { AppBar, Box, Toolbar, Typography, Button, Menu, MenuItem, Grid } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.jpg';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -15,27 +16,33 @@ const Header = () => {
     setLoginAnchorEl(null);
   };
 
-  const handleLogin = (role) => {
-    // Navigate to the corresponding login page based on role
-    navigate(`/pages/login/${role}`);
-    handleLoginMenuClose();
-  };
-
   return (
     <AppBar position="static">
-      <Toolbar>
-        {/* Logo and title */}
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={() => navigate('/')}>
-        GSU Demo Day Spring 2024
-        </Typography>
-
-        {/* Navigation Buttons */}
-        <Button color="inherit" onClick={() => navigate('/')}>Home</Button>
-        <Button color="inherit" onClick={() => navigate('/agenda')}>Agenda</Button>
-        <Button color="inherit" onClick={() => navigate('/Past Events')}>Past Events</Button>
-        {/* Login dropdown menu */}
+      {/* First row for logo and title */}
+      <Toolbar variant="dense" style={{ minHeight: '120px' }}>
+        <Grid container alignItems="center" justifyContent="space-between">
+          <Grid item>
+            <Box sx={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+              <img src={logo} alt="logo" style={{ height: '160px', paddingTop: '30px'}} />
+            </Box>
+          </Grid>
+          <Grid item xs>
+            <Typography variant="h2" component="div" sx={{ textAlign: 'center' }}>
+              GSU Computer Science Demo Day
+            </Typography>
+          </Grid>
+          <Grid item xs={2} /> {/* This is to balance the grid layout */}
+        </Grid>
+      </Toolbar >
+      {/* Second row for navigation buttons and login */}
+      <AppBar position="sticky" color="primary" sx={{ top: 'auto' }}>
+      <Toolbar variant="dense" component="nav" style={{ justifyContent: 'center' }} >
+        <Button color="inherit" sx={{ fontWeight: 'bold', fontSize: 'large' }} onClick={() => navigate('/')}>Home</Button>
+        <Button color="inherit" sx={{ fontWeight: 'bold', fontSize: 'large' }} onClick={() => navigate('/agenda')}>Agenda</Button>
+        <Button color="inherit" sx={{ fontWeight: 'bold', fontSize: 'large' }} onClick={() => navigate('/Past Events')}>Past Events</Button>
         <Button
           color="inherit"
+          sx={{ fontWeight: 'bold', fontSize: 'large' }}
           aria-controls="login-menu"
           aria-haspopup="true"
           onClick={handleLoginMenuClick}
@@ -49,11 +56,12 @@ const Header = () => {
           open={isLoginMenuOpen}
           onClose={handleLoginMenuClose}
         >
-          <MenuItem onClick={() => handleLogin('competitor')}>Login as a Competitor</MenuItem>
-          <MenuItem onClick={() => handleLogin('judge')}>Login as a Judge</MenuItem>
+          <MenuItem onClick={() => navigate('/pages/login/competitorLogin')}>Login as a Competitor</MenuItem>
+          <MenuItem onClick={() => navigate('/pages/login/judgeLogin')}>Login as a Judge</MenuItem>
         </Menu>
-        <Button color="inherit" onClick={() => navigate('/pages/Signup')}>Sign Up</Button>
+        <Button color="inherit" sx={{ fontWeight: 'bold', fontSize: 'large'}} onClick={() => navigate('/pages/Signup')}>Sign Up</Button>
       </Toolbar>
+      </AppBar>
     </AppBar>
   );
 };
