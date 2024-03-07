@@ -45,6 +45,8 @@ export default function App() {
             {/*for testing purposing*/}
             <Route path="/jview" element={<Judge />} />
             <Route path="/score" element={<ScorePage />} />
+            <Route path="/pages/jview" element={<JudgeView />} />
+            <Route path="/pages/scoring" element={<ScorePage />} />
             {/* Uncomment and modify the following routes as per your application's requirements */}
             {/* <Route path="/AgreePage" element={<AgreePage accessCode={accessCode} verifyAccessCode={verifyAccessCode} />} /> */}
             {/* <Route path="/AudioPlayer" element={<AuthWrapper component={<AudioPlayer />} />} /> */}
