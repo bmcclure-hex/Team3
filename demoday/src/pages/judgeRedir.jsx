@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import{Typography} from '@mui/material'
+import { Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import statsComp from "../components/statsComp";
@@ -32,14 +32,16 @@ function Judge() {
   const navigate = useNavigate();
 
   const scorePage = () => {
-    navigate("/score");
+    navigate("/scorePage");
   };
 
   return (
     <h1 style={{ textAlign: "center" }}>
       {" "}
-      <Typography align='center' sx={{my:5}} variant='h4'> Scoring Portal</Typography>
-
+      <Typography align="center" sx={{ my: 5 }} variant="h4">
+        {" "}
+        Scoring Portal
+      </Typography>
       <Container>
         <Box sx={{ width: "50%" }}>
           <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
