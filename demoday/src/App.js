@@ -12,7 +12,7 @@ import CompetitorLogin from "./pages/login/competitorLogin";
 import JudgeLogin from "./pages/login/judgeLogin";
 
 //Import Pages (for Testing purpose)
-import Judge from "./pages/judgeRedir";
+// import Judge from "./pages/judgeRedir";
 import ScorePage from "./pages/scorePage";
 
 
@@ -43,9 +43,9 @@ export default function App() {
             <Route path="/pages/login/judgeLogin" element={<JudgeLogin />} />
 
             {/*for testing purposing*/}
-            <Route path="/jview" element={<Judge />} />
+            {/* <Route path="/jview" element={<Judge />} /> */}
             <Route path="/score" element={<ScorePage />} />
-            <Route path="/pages/jview" element={<JudgeView />} />
+            {/* <Route path="/pages/jview" element={<JudgeView />} /> */}
             <Route path="/pages/scoring" element={<ScorePage />} />
             {/* Uncomment and modify the following routes as per your application's requirements */}
             {/* <Route path="/AgreePage" element={<AgreePage accessCode={accessCode} verifyAccessCode={verifyAccessCode} />} /> */}
