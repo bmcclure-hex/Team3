@@ -1,6 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// import theme
+import { ThemeProvider } from '@mui/material/styles';
+import theme from "./theme";
+
 // Importing components
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -15,7 +19,6 @@ import JudgeLogin from "./pages/login/judgeLogin";
 import Judge from "./pages/judgeRedir";
 import ScorePage from "./pages/scorePage";
 
-
 // Context
 import { UserContextProvider } from "./context/user-context";
 
@@ -23,14 +26,12 @@ import { UserContextProvider } from "./context/user-context";
 import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 
-// import{ BrowserRouter as Router, Route, Switch, Routes} from 'react-router-dom';
-
 export default function App() {
-  // State management for accessCode can be defined here if needed
-  // const [accessCode, setAccessCode] = useState('');
 
   return (
+    
     <BrowserRouter>
+    <ThemeProvider theme={theme}> {/* Wrap your components with ThemeProvider */}
       <UserContextProvider>
         <LocalizationProvider dateAdapter={AdapterLuxon}>
           <Header /> {/* Header added at the top */}
@@ -41,32 +42,14 @@ export default function App() {
             <Route path="/pages/signup/judgeSignup" element={<JudgeSignup />} />
             <Route path="/pages/login/competitorLogin" element={<CompetitorLogin />} />
             <Route path="/pages/login/judgeLogin" element={<JudgeLogin />} />
-
-            {/*for testing purposing*/}
-            {/* <Route path="/jview" element={<Judge />} /> */}
             <Route path="/scorePage" element={<ScorePage />} />
             <Route path="/pages/judgeRedir" element={<Judge />} />
-            {/* Uncomment and modify the following routes as per your application's requirements */}
-            {/* <Route path="/AgreePage" element={<AgreePage accessCode={accessCode} verifyAccessCode={verifyAccessCode} />} /> */}
-            {/* <Route path="/AudioPlayer" element={<AuthWrapper component={<AudioPlayer />} />} /> */}
           </Routes>
           <Footer /> {/* Footer added at the bottom */}
         </LocalizationProvider>
       </UserContextProvider>
+    </ThemeProvider>
     </BrowserRouter>
+    
   );
 }
-
-//     <Router>
-//       <div>
-//         Team 3
-//         <Routes>
-//           <Route path="/"/>
-//           <Route path="/jview" element={<Judge/>}/>
-//           <Route path="/score" element={<ScorePage/>}/>
-
-//         </Routes>
-//       </div>
-//     </Router>
-//   )
-// }

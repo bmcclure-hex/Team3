@@ -17,17 +17,18 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static">
+    <Box sx={{ width: '100%' }}>
+    <AppBar color="background" position="static" sx={{ width: '100%' }}>
       {/* First row for logo and title */}
-      <Toolbar variant="dense" style={{ minHeight: '120px' }}>
-        <Grid container alignItems="center" justifyContent="space-between">
+      <Toolbar variant="dense"  style={{ minHeight: '120px', width: '100%' }}>
+        <Grid  container alignItems="center" justifyContent="space-between">
           <Grid item>
             <Box sx={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
               <img src={logo} alt="logo" style={{ height: '160px', paddingTop: '30px'}} />
             </Box>
           </Grid>
           <Grid item xs>
-            <Typography variant="h2" component="div" sx={{ textAlign: 'center' }}>
+            <Typography variant="h2" component="div" sx={{ fontWeight: 'bold', fontColor: 'black', textAlign: 'center' }}>
               GSU Computer Science Demo Day
             </Typography>
           </Grid>
@@ -35,7 +36,7 @@ const Header = () => {
         </Grid>
       </Toolbar >
       {/* Second row for navigation buttons and login */}
-      <AppBar position="sticky" color="primary" sx={{ top: 'auto' }}>
+      <AppBar color="primary" position="sticky" sx={{ top: 'auto' }}>
       <Toolbar variant="dense" component="nav" style={{ justifyContent: 'center' }} >
         <Button color="inherit" sx={{ fontWeight: 'bold', fontSize: 'large' }} onClick={() => navigate('/')}>Home</Button>
         <Button color="inherit" sx={{ fontWeight: 'bold', fontSize: 'large' }} onClick={() => navigate('/agenda')}>Agenda</Button>
@@ -63,6 +64,7 @@ const Header = () => {
       </Toolbar>
       </AppBar>
     </AppBar>
+    </Box>
   );
 };
 

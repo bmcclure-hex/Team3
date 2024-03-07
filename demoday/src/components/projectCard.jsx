@@ -1,4 +1,4 @@
-import {Grid,Typography,Card,CardActionArea,CardContent,CardMedia,Box,} from "@mui/material";
+import {Typography,Card,CardContent,CardMedia} from "@mui/material";
 import React from "react";
 import exampleImage from '../assets/placeholder.jpg';
 
@@ -31,11 +31,3 @@ const ProjectCard = () => {
 };
 
 export default ProjectCard;
-
-{
-  /* <div>
-
-
-<img src="/Assets/placeholder.jpg" alt="Logo" />
-</div> */
-}

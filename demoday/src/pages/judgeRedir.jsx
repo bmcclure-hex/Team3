@@ -4,8 +4,8 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
-import statsComp from "../components/statsComp";
-import statsIncomp from "../components/statsIncomp";
+// import statsComp from "../components/statsComp";
+// import statsIncomp from "../components/statsIncomp";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled(Box)({
@@ -13,9 +13,9 @@ const Container = styled(Box)({
   justifyContent: "center",
 });
 
-const headLabel = styled("h1")({
-  textAlign: "center",
-});
+// const headLabel = styled("h1")({
+//   textAlign: "center",
+// });
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
