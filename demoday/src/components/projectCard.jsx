@@ -1,13 +1,7 @@
-import {
-  Grid,
-  Typography,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Box,
-} from "@mui/material";
+import {Grid,Typography,Card,CardActionArea,CardContent,CardMedia,Box,} from "@mui/material";
 import React from "react";
+import exampleImage from '../assets/placeholder.jpg';
+
 
 const ProjectCard = () => {
   return (
@@ -28,8 +22,8 @@ const ProjectCard = () => {
       </CardContent>
       <CardMedia
         component="img"
-        image="/Assets/placeholder.jpg"
-        height="340"
+        image={exampleImage}
+        height="500"
         alt="Project Media"
       />
     </Card>
