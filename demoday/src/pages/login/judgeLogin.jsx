@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, TextField, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 
 const JudgeLogin = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -46,6 +48,7 @@ const JudgeLogin = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button
+            onClick={() => navigate('/pages/judgeRedir')}
             type="submit"
             fullWidth
             variant="contained"

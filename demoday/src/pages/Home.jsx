@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
 
-      <Container>
+      <Container sx={{ pt: 5, pb: 20 }}>
         <Typography variant="h4" pt={3} gutterBottom>Welcome to GSU Demo Day Spring 2024</Typography>
         <Typography variant="h5" gutterBottom>Date: Friday, April 12, 2024</Typography>
         <Typography variant="h5" gutterBottom>Location: Creative Media Industries Institute | 25 Park Place, 2nd Floor</Typography>
