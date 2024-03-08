@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, TextField, Button } from '@mui/material';
-
+import { useNavigate } from 'react-router-dom';
 
 const CompetitorLogin = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -46,6 +47,7 @@ const CompetitorLogin = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button
+            onClick={() => navigate('/pages/CompetitorSubmission')}
             type="submit"
             fullWidth
             variant="contained"
