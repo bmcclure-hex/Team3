@@ -47,7 +47,7 @@ const CompetitorLogin = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button
-            onClick={() => navigate('/pages/CompetitorSubmission')}
+            onClick={() => navigate('/pages/ProjectSubmission')}
             type="submit"
             fullWidth
             variant="contained"

@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <>
-      <Container maxWidth="lg" color="background" sx={{ pt: 5, pb: 20 }}>
+      <Container maxWidth="lg" color="background" sx={{ pt: 5, pb: 5 }}>
         <Paper elevation={3} style={{ margin: "24px 0", padding: "24px" }}>
           <Typography variant="h4" pt={3} gutterBottom>
             Welcome to GSU Demo Day Spring 2024
@@ -133,7 +133,7 @@ const Home = () => {
               Deadlines
             </Typography>
             <Typography paragraph>
-              Abstract Submission: March 22nd 
+              Abstract Submission: March 29th 
               Poster Print Request: April 10th
             </Typography>
           </Box>

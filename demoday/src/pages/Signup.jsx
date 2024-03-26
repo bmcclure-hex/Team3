@@ -12,7 +12,7 @@ const SignUpPage = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      style={{ height: '90vh' }}
+      style={{ height: '60vh' }}
     >
       <Paper elevation={3} style={{ margin: 5, padding: 16, width: '90%', maxWidth: 600 }}>
         <Typography variant="h5" component="h1" gutterBottom>

@@ -16,7 +16,7 @@ import CompetitorLogin from "./pages/login/competitorLogin";
 import JudgeLogin from "./pages/login/judgeLogin";
 import Judge from "./pages/judgeRedir";
 import ScorePage from "./pages/scorePage";
-import Competitor from "./pages/CompetitorSubmission";
+import ProjectSubmission from "./pages/ProjectSubmission";
 
 // Context
 import { UserContextProvider } from "./context/user-context";
@@ -52,7 +52,7 @@ export default function App() {
               <Route path="/pages/login/judgeLogin" element={<JudgeLogin />} />
               <Route path="/scorePage" element={<ScorePage />} />
               <Route path="/pages/judgeRedir" element={<Judge />} />
-              <Route path="pages/CompetitorSubmission" element={<Competitor />} />
+              <Route path="pages/ProjectSubmission" element={<ProjectSubmission />} />
             </Routes>
             <Footer /> {/* Footer added at the bottom */}
           </LocalizationProvider>

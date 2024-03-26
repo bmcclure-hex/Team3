@@ -36,7 +36,7 @@ const JudgeSignup = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      style={{ minHeight: '90vh' }}
+      style={{ minHeight: '60vh' }}
     >
       <Typography pb={3} pl={2} variant="h4" gutterBottom>
         Judge Registration
