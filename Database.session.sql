@@ -1,0 +1,2 @@
+-- @block
+SELECT * from competitors;
