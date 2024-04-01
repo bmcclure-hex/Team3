@@ -20,7 +20,7 @@ const Rubric = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(e.target.value);
+    console.log(e.target.name+": "+e.target.value);
   };
 
   const submitRubric = (e) => {
@@ -49,7 +49,6 @@ const Rubric = () => {
             <Typography
               style={{
                 marginBottom: "16px",
-                color: formData.presentation ? "inherit" : "red",
               }}
               sx={{ textDecoration: "underline" }}
               variant="h5"
@@ -207,7 +206,7 @@ const Rubric = () => {
               Overall Experience
             </Typography>
             <Typography variant="h6">
-              How user-friendly was the project?
+              Overall, how would you rate this project?
             </Typography>
             <Ratings
               name="ox"
