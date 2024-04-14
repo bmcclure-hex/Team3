@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Box, TextField, Typography, Button } from '@mui/material';
+import axios from 'axios'
 
 const JudgeSignup = () => {
   const [judgeInfo, setJudgeInfo] = useState({
@@ -28,6 +29,15 @@ const JudgeSignup = () => {
     }
     console.log('Submission', judgeInfo);
     // Proceed with actual submission (API call or form processing)
+    axios.post('http://localhost:8080/pages/signup/judgeSignup', {
+      firstName: judgeInfo.firstName, 
+      lastName: judgeInfo.lastName,
+      email: judgeInfo.email,
+      password: judgeInfo.confirmPassword})
+      .then((data) => {
+        console.log(data);
+        // clear data from form
+    });
   };
 
   return (
@@ -97,7 +107,6 @@ const JudgeSignup = () => {
           variant="contained"
           color="primary"
           fullWidth
-          
         >
           Submit
         </Button>
